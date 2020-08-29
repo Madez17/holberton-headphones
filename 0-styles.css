@@ -1,0 +1,386 @@
+/* SUMMARY
+1. GLOBAL
+2. LAYOUT
+3. SECTION
+4. CARD
+*/
+
+
+/*** 1. GLOBAL ***/
+
+/* Reset / Normalize
+  ============================= */
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+
+/* FONTS
+  ============================*/
+@font-face {
+    font-family: 'SourceSansPro-Bold';
+    src: url('fonts/source-sans-pro/SourceSansPro-Bold.otf');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SourceSansPro-Regular';
+    src: url('fonts/source-sans-pro/SourceSansPro-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SourceSansPro-Semibold';
+    src: url('fonts/source-sans-pro/SourceSansPro-Semibold.otf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Variables
+  ============================= */
+
+:root {
+    --color-balck: #071629;
+    --color-primary: #FF6565;
+    --color-secondary: #071629;
+    --color-white: #FFF;
+
+    --text-color-black: var(--color-balck);
+    --text-color-white: var(--color-white);
+    --text-align: center;
+
+    --font-family-base: 'SourceSansPro-Regular';
+    --font-family-title: 'SourceSansPro-Semibold';
+    --font-family-bold: 'SourceSansPro-Bold';
+
+    --font-size-small: 1.2rem;
+    --font-size-medium: 1.6rem;
+    --font-size-large: 1.8rem;
+    --font-size-x-large: 2.3rem;
+    --font-size-xx-large: 3.2rem;
+
+    --line-height-small: 1.2;
+    --line-height-base: 1.5;
+    --line-height-big: 1.8;
+
+    --links-hover-active-color: #FF6565;
+    --button-hove-active-opacity: 0.9;
+
+    --max-width-content: 1000px;
+    --box-shadow: 3px 3px 31px 5px rgba(0,0,0,0.35);
+    
+    /* BUTTON */
+    --button-display: inline-block;
+    --button-color-text: var(--color-white);
+    --button-padding: 1.5rem 4rem;
+    --button-color: var(--color-primary);
+    --button-font-size: var(--font-size-medium);
+    --button-hover-color: var(--color-white);
+    --button-hover-background: #FB5454;
+    --button-border-radius: 50px;
+    --button-text-transform: uppercase;
+    --button-font-family: var(--font-family-bold);
+
+    /* BLOCKQUOTE */
+    --blockquote-text-size: var(--font-size-medium);
+    --blockquote-text-color-black: var(--color-balck);
+    --blockquote-text-color-white: var(--color-white);
+    --blockquote-lineheight: var(--line-height-small);
+
+    /* HEADER */
+     --header-padding: 3rem 0 0;
+
+    /* NAV */
+    --nav-item-margin: 0 0 0 3rem;
+    --nav-item-diaplay: inline-block;
+    --nav-item-font: var(--font-family-bold);
+    --nav-item-font-size: var(--font-size-medium);
+    --nav-item-color: var(--color-white);
+    --nav-item-hover-color: var(--color-primary);
+
+    /* MOTION */
+    --transition-duration: .3s;
+    --transition-cubic-bezier: cubic-bezier(0.17, 0.67, 0, 1.01);
+}
+
+    /* Base
+      ============================= */
+  
+    *, *:before, *:after {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        font-size: 62.5%;
+    }
+
+    body {
+        color: var(--text-color-black);
+        font-size: var(--font-size-medium);
+        line-height: var(--line-height-base);
+        text-align: var(--text-align);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-family-title);
+        font-size: var(--font-size-xx-large);
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    a:visited {
+        font-style: italic;
+    }
+
+    a:active{
+        color: var(--links-hover-active-color);
+    }
+
+    blockquote {
+        font-family: var(--font-family-base);
+        max-width: 64%;
+        margin: 6rem auto 0;
+    }
+
+    .button {
+        background-color: var(--button-color);
+        border-radius: var(--button-border-radius);
+        box-shadow: var(--box-shadow);
+        color: var(--button-color-text);
+        display: var(--button-display);
+        font-family: var(--button-font-family);
+        font-size: var(--button-font-size);
+        padding: var(--button-padding);
+        text-transform: var(--button-text-transform);
+    }
+
+    .button:hover {
+        background-color: var(--button-hover-background);
+        color: var(--button-hover-color);
+        transition: .3s;
+    }
+
+    .container {
+        max-width: var(--max-width-content);
+        margin: 0 auto;
+    }
+
+    /* Header
+      ============================= */
+
+    .header {
+        background-image: url('images/headphones_hero_1.jpg');
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        height: 800px;
+        padding: var(--header-padding);
+        position: relative;
+        z-index: 3;
+    }
+
+    .header-container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1.5rem;
+    }
+
+    /* Header menu responsive
+      ============================= */
+
+    .header .menu-btn {
+        display: none;
+    }
+
+    .menu-btn:checked ~ .navbar-menu{
+        display: block;
+    }
+    
+    .menu-btn:checked ~ .navbar-menu .nav {
+        max-height: 100%;
+        overflow: inherit;
+    }
+    
+    .menu-btn:checked ~ .menu-icon .navicon {
+        background: transparent;
+    }
+
+    .header .menu-btn:checked ~ .menu-icon .navicon::before {
+        transform: rotate(-45deg);
+    }
+
+    .header .menu-btn:checked ~ .menu-icon .navicon::after {
+        transform: rotate(45deg);
+    }
+      
+    .header .menu-btn:checked ~ .menu-icon .navicon::before,
+    .header .menu-btn:checked ~ .menu-icon .navicon::after {
+        top: 0;
+    }
+
+    .header .menu-icon {
+        cursor: pointer;
+        display: none;
+        padding: 2.5rem;
+        position: relative;
+        user-select: none;
+    }
+
+    .header .menu-icon .navicon {
+        background: var(--color-white);
+        display: block;
+        height: .2rem;
+        position: relative;
+        transition: background .2s ease-out;
+        width: 1rem;
+    }
+
+    .header .menu-icon .navicon::before,
+    .header .menu-icon .navicon::after {
+        content: '';
+        display: block;
+        width: 2rem;
+        height: .2rem;
+        position: absolute;
+        background: var(--color-white);
+        transition: all .2s ease-out;
+  }
+
+    .header .menu-icon .navicon::before {
+        top: .7rem;
+    }
+
+    .header .menu-icon .navicon::after {
+        top: -.7rem;
+    }
+
+    @media only screen and (max-width: 480px) {
+        :root {
+            margin: 0;
+        }
+
+        .header {
+            height: auto;
+        }
+        
+        .header .container {
+            position: relative;
+        }
+
+        .header-logo {
+            padding-top: 8px;
+        }
+
+        .header-container {
+            display: block;
+        }
+        .header .menu-icon {
+            display: block;
+            position: absolute;
+            top: 0
+        }
+
+        .header .nav {
+            flex-direction: column;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .2s ease-out;
+        }
+
+        blockquote {
+            padding: 0 0 6rem 0;
+        }
+    }
+
+
+    /* Navbar
+      ============================= */
+
+    .nav {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav .nav-item {
+        font-family: var(--nav-item-font);
+        font-size: var(--nav-item-font-size);
+        display: var(--nav-item-diaplay);
+        margin: var(--nav-item-margin)
+    }
+
+    .nav .nav-link {
+        color: var(--text-color-white);
+        display: block;
+        padding: 0.5rem 0;
+        position: relative;
+    }
+
+    .nav .nav-link:hover {
+        color: var(--nav-item-hover-color)
+    }
+
+    @media only screen and (max-width: 767px) {
+        :root {
+            --nav-item-margin: 0 0 0 2rem;
+        }
+
+        .nav .nav-item {
+            margin: var(--nav-item-margin);
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        .nav-item {
+            padding-top: 30px;
+        }
+
+        .navbar-menu {
+            display: none;
+            flex: 1;
+        }
+    }
+    /* Caption
+      ============================= */
+
+    .caption-hero-piece {
+        margin-top: 329px;
+    }
+
+    .caption-hero-piece .caption-inner {
+        color: var(--color-white);
+    }
+
+    .caption-title {
+        margin-bottom: 0;
+    }
+    .caption-inner p {
+        font-family: var(--font-family-bold);
+        margin: 0 auto 4rem;
+    }
+
+    @media only screen and (max-width: 767px) {
+        blockquote {
+            max-width: 90%;
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        .caption-hero-piece {
+            margin-top: 227px;
+            padding: 0 1.6rem;
+        }
+
+        blockquote {
+            max-width: 100%;
+        }
+    }
