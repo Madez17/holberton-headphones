@@ -72,9 +72,9 @@
     /* BUTTON */
     --button-display: inline-block;
     --button-color-text: var(--color-white);
-    --button-padding: 1.5rem 4rem;
+    --button-padding: 1.4rem 4rem;
     --button-color: var(--color-primary);
-    --button-font-size: var(--font-size-medium);
+    --button-font-size: 1.4rem;
     --button-hover-color: var(--color-white);
     --button-hover-background: #FB5454;
     --button-border-radius: 50px;
