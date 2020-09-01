@@ -6,8 +6,7 @@
 
 - Creation Header Deskto to Responsive
 
-![Imgur](https://i.imgur.com/3fSYkuQ.png)
-[![Watch the video](https://i.imgur.com/zoqDhC3.mp4)
+![An open source player](https://i.imgur.com/vVstBLh.gif)
 
 
 ---
