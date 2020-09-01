@@ -99,7 +99,7 @@
     --nav-item-hover-color: var(--color-primary);
 
     /* MOTION */
-    --transition-duration: .3s;
+    --transition-duration: .3s ease;
     --transition-cubic-bezier: cubic-bezier(0.17, 0.67, 0, 1.01);
 }
 
@@ -327,7 +327,8 @@
     }
 
     .nav .nav-link:hover {
-        color: var(--nav-item-hover-color)
+        color: var(--nav-item-hover-color);
+        transition: var(--transition-duration);
     }
 
     @media only screen and (max-width: 767px) {

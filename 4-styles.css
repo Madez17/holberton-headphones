@@ -327,7 +327,8 @@
     }
 
     .nav .nav-link:hover {
-        color: var(--nav-item-hover-color)
+        color: var(--nav-item-hover-color);
+        transition: var(--transition-duration);
     }
 
     @media only screen and (max-width: 767px) {
@@ -533,7 +534,7 @@
         margin-bottom: 50px;
         padding-bottom: 25px;
         resize: none;
-        min-width: 345px;
+        min-width: 335px;
     }
 
     .contact-us-section textarea {

@@ -327,7 +327,8 @@
     }
 
     .nav .nav-link:hover {
-        color: var(--nav-item-hover-color)
+        color: var(--nav-item-hover-color);
+        transition: var(--transition-duration);
     }
 
     @media only screen and (max-width: 767px) {
