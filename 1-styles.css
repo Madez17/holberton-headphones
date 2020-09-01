@@ -389,3 +389,58 @@
             max-width: 100%;
         }
     }
+
+    /* Section why we do
+      ============================= */
+
+    .section-what-we-do {
+        padding: 6rem 0 8rem 0;
+    }
+
+    .section-inner-item {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-what-we-do .section-sub-inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 8rem;
+    }
+
+    .icon {
+        font-size: 11rem;
+        color: var(--color-primary);
+    }
+
+    .section-inner-item h3{
+        font-size: var(--font-size-large);
+        margin-bottom: 0;
+    }
+
+    .section-inner-item p {
+        font-family: var(--font-family-base);
+    }
+
+    @media only screen and (max-width: 767px) {
+        .container {
+            max-width: 90%;
+        }
+
+        .section-what-we-do .section-sub-inner {
+            flex-wrap: wrap;
+            margin: 8rem;
+        }        
+    }
+
+    @media only screen and (max-width: 767px) {
+        .section-what-we-do .section-sub-inner {
+            margin: 4rem;
+        }   
+        
+        .section-what-we-do .section-inner blockquote {
+            padding: 0;
+        }
+    }
