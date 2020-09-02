@@ -4,11 +4,11 @@
 
 ## Construction One-page
 
-- Creation Header Deskto
+- Creation page design for Deskto, only HTML5 - CSS3
 ![](Desktop.gif)
 
 
-- Creation Header Deskto to Responsive
+- Creation page design for Responsive, only HTML5 - CSS3
 
 ![](Responsive.gif)
 
